@@ -55,7 +55,7 @@
 
                 <!-- calculation  -->
                 <div class="submit-button">
-                    <button id="calculation" class="block mx-auto my-3 px-6 py-2 border-solid bg-sky-500 rounded-lg text-l text-white">Calculate</button>
+                    <button id="calculate-button" class="block mx-auto my-3 px-6 py-2 border-solid bg-sky-500 rounded-lg text-l text-white">Calculate</button>
                 </div>
 
                 <!-- update total expenses  -->
@@ -71,20 +71,20 @@
                 <!-- savings  -->
                 <div class="savings">
                     <h3 class="inline m-2 mr-0 p-1">Save:</h3>
-                    <input class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Amount" maxlength="4" size="12" >
+                    <input id="Percentage" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Percentage" maxlength="4" size="12" >
                     <h3 class="inline mr-1">%</h3>
 
-                    <button class="mx-auto my-3 px-6 py-1 border-solid bg-sky-500 rounded-lg text-sm text-white">Save</button>
+                    <button id="save-button" class="mx-auto my-3 px-6 py-1 border-solid bg-sky-500 rounded-lg text-sm text-white">Save</button>
                 </div>
 
                 <!-- update saving amount  -->
                 <div class="savings m-4 pt-3 text-xl font-bold">
-                    <h2>Saving Amount: <span>2000</span>/-</h2>
+                    <h2>Saving Amount: <span id="saving-amount">00</span>/-</h2>
                 </div>
                 
                 <!-- update remaining balance  -->
                 <div class="remaining-balance m-4 pb-3 text-xl font-bold">
-                    <h2>Remaining Balance: <span>2500</span>/-</h2>
+                    <h2>Remaining Balance: <span id="remaining-balance">00</span>/-</h2>
                 </div>
             </div>
         </section>
