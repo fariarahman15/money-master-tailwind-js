@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwindcss  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Money Manager</title>
+</head>
+<body>
+    <!-- heading  -->
+    <head>
+        <h1>Money Manager</h1>
+    </head>
+
+    <!-- main body  -->
+    <main>
+        <section class="bg-slate-50 container w-1/2 mx-auto text-center">
+            <!-- income section  -->
+            <div class="income-section">
+                <h2 class="m-4">Income</h2>
+                <h3 class=" inline m-2 mr-0 p-1">Income:</h3>
+                <input class="m-2 ml-0 p-1 text-left rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Your Income">
+            </div>
+
+            <!-- expenses section  -->
+            <div class="expenses-section">
+                <h2 class="m-4">Expenses</h2>
+
+                <!-- food expenses  -->
+                <div class="food-expenses">
+                    <h3 class="inline m-2 mr-0 p-1">Food:</h3>
+                    <input class="m-2 ml-0 p-1 text-left rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Food Expenses">
+                </div>
+
+                <!-- rent expenses  -->
+                <div class="rent-expenses">
+                    <h3 class="inline m-2 mr-0 p-1">Rent:</h3>
+                    <input class="m-2 ml-0 p-1 text-left rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Rent Expenses">
+                </div>
+
+                <!-- cloth expenses  -->
+                <div class="cloth-expenses">
+                    <h3 class="inline m-2 mr-0 p-1">Cloth:</h3>
+                    <input class="m-2 ml-0 p-1 text-left rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Clothes Expenses">
+                </div>
+            </div>
+
+            <!-- calculation  -->
+            <div class="submit-button">
+                <button>Calculate</button>
+            </div>
+
+            <!-- update total expenses  -->
+            <div class="total-expenses">
+                <h2>Total Expenses: <span>5500</span></h2>
+            </div>
+            
+            <!-- update balance  -->
+            <div class="balance">
+                <h2>Balance: <span>4500</span></h2>
+            </div>
+
+            <!-- savings  -->
+            <div class="savings">
+                <h3 class="inline m-2 mr-0 p-1">Save:</h3>
+                <input class="m-2 ml-0 p-1 text-left rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Clothes Expenses">
+                <h3 class="inline">%</h3>
+                <button>Save</button>
+            </div>
+
+            <!-- update saving amount  -->
+            <div class="savings">
+                <h2>Saving Amount: <span>2000</span></h2>
+            </div>
+            
+            <!-- update remaining balance  -->
+            <div class="balance">
+                <h2>Remaining Balance: <span>2500</span></h2>
+            </div>
+
+
+
+
+        </section>
+    </main>
+    
+</body>
+</html>
