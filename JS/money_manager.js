@@ -27,9 +27,9 @@ function getBalance(minuendAmount, subtrahendAmount){
 
 
 // calculate & update savings
-function getsavings(currentBalance){
+function getsavings(incomeAmount){
     const savingsPercentage = getInputAmount('Percentage');
-    const savingAmonut = (savingsPercentage/100) * currentBalance;
+    const savingAmonut = (savingsPercentage/100) * incomeAmount;
     const totalsavings = document.getElementById('saving-amount');
     totalsavings.innerText = savingAmonut;
     return savingAmonut;
@@ -62,7 +62,7 @@ document.getElementById('save-button').addEventListener('click',function(){
     const currentBalance = getBalance(incomeAmount, expensesAmount); 
 
     // update saving amount 
-    const savings = getsavings(currentBalance);
+    const savings = getsavings(incomeAmount);
     
     // update remaining balance 
     const remainingBalance = getBalance(currentBalance, savings);
