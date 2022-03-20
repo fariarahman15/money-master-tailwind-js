@@ -44,14 +44,30 @@ function getsavings(incomeAmount){
 document.getElementById('calculate-button').addEventListener('click',function(){
     // get income amount 
     const incomeAmount = getInputAmount('income-amount');
+    if (incomeAmount < 0 || isNaN(incomeAmount) == true ){
+        // error message 
+        document.getElementById('input-error').style.display = 'block';
+    }
 
-    // update expenses amount 
-    const expensesAmount = getTotalExpenses();
+    else if (incomeAmount > 0 && isNaN(incomeAmount) == false) {
+        // update expenses amount 
+        const expensesAmount = getTotalExpenses();
 
-    // update balance 
-    const currentBalance = getBalance(incomeAmount, expensesAmount); 
-    const totalBalance = document.getElementById('total-balance');
-    totalBalance.innerText = currentBalance;
+        if (incomeAmount > expensesAmount){
+            // update balance 
+            const currentBalance = getBalance(incomeAmount, expensesAmount); 
+            const totalBalance = document.getElementById('total-balance');
+            totalBalance.innerText = currentBalance;
+            // error message 
+            document.getElementById('over-expenses-error').style.display = 'none';
+        }
+        else if (incomeAmount < expensesAmount){
+            // error message 
+            document.getElementById('over-expenses-error').style.display = 'block';
+        }
+        // error message 
+        document.getElementById('input-error').style.display = 'none';
+        }
 });
 
 
@@ -63,10 +79,19 @@ document.getElementById('save-button').addEventListener('click',function(){
 
     // update saving amount 
     const savings = getsavings(incomeAmount);
-    
-    // update remaining balance 
-    const remainingBalance = getBalance(currentBalance, savings);
-    const updatedlBalance = document.getElementById('remaining-balance');
-    updatedlBalance.innerText = remainingBalance;
+
+    if (currentBalance > savings){
+        // update remaining balance 
+        const remainingBalance = getBalance(currentBalance, savings);
+        const updatedlBalance = document.getElementById('remaining-balance');
+        updatedlBalance.innerText = remainingBalance;
+
+        // error message 
+        document.getElementById('savings-error').style.display = 'none';
+    }
+    else if(currentBalance < savings){
+        // error message 
+        document.getElementById('savings-error').style.display = 'block';
+    }
     
 });
